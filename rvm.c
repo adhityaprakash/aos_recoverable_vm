@@ -5,6 +5,8 @@
  */
 rvm_t rvm_init(const char *directory)
 {
+        fopen("directory", "w+");
+        return NULL;
 }
 
 
