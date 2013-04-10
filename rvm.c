@@ -1,4 +1,6 @@
 
+#include "rvm.h"
+
 
 /*
  * Initialize the library with the specified directory as backing store.
@@ -6,7 +8,8 @@
 rvm_t rvm_init(const char *directory)
 {
         fopen("directory", "w+");
-        return NULL;
+        rvm_t t;
+        return t;
 }
 
 
@@ -84,4 +87,11 @@ void rvm_abort_trans(trans_t tid)
  */
 void rvm_truncate_log(rvm_t rvm)
 {
+}
+
+
+int main(void)
+{
+        printf("rvm.c main\n");
+        return 0;
 }

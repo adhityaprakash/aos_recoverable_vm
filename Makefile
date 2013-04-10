@@ -8,9 +8,9 @@ RM      = /bin/rm -rf
 AR      = ar rc
 RANLIB  = ranlib
 
-LIBRARY = gtthread.a
+LIBRARY = librvm.a
 
-LIB_SRC = gtthread.c gtthread_sched.c gtthread_mutex.c
+LIB_SRC = rvm.c
 
 LIB_OBJ = $(patsubst %.c,%.o,$(LIB_SRC))
 
