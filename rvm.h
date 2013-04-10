@@ -1,4 +1,5 @@
-
+#ifndef __RVM_H_
+#define __RVM_H_
 #include <stdio.h>
 
 
@@ -11,7 +12,7 @@
  */
 
 typedef struct _rvm_t{
-        //TODO
+        FILE *fp; // FIXME err, is this what we want?
 }rvm_t;
 typedef struct _trans_t{
         //TODO
@@ -58,7 +59,7 @@ void rvm_destroy(rvm_t rvm, const char *segname);
  * begin a transaction that will modify the segments listed in segbases.
  * If any of the specified segments is already being modified by a transaction,
  * then the call should fail and return (trans_t) 1.
- * Note that trant_t needs to be able to be typecasted to an integer type.
+ * Note that trans_t needs to be able to be typecasted to an integer type.
  */
 trans_t rvm_begin_trans(rvm_t rvm, int numsegs, void **segbases); 
 
@@ -91,3 +92,8 @@ void rvm_abort_trans(trans_t tid);
  * and shrink the log file(s) as much as possible.
  */
 void rvm_truncate_log(rvm_t rvm);
+
+
+
+
+#endif

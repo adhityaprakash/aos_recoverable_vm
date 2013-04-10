@@ -1,5 +1,6 @@
 
 #include "rvm.h"
+#include <stdlib.h>
 
 
 /*
@@ -7,9 +8,10 @@
  */
 rvm_t rvm_init(const char *directory)
 {
-        fopen("directory", "w+");
-        rvm_t t;
-        return t;
+        FILE *fp = fopen("directory", "w+");
+        rvm_t *rvm_p = malloc(sizeof(rvm_t));
+        rvm_p->fp = fp;
+        return *rvm_p;
 }
 
 
