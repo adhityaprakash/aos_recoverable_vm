@@ -1,0 +1,5 @@
+README file including:
+
+    How to compile your library.
+    How you use logfiles to accomplish persistency plus transaction semantics. How many files do you have? What goes in them? How do the files get cleaned up, so that they do not expand indefinitely?
+    Any thoughts you have on the project, including things that work especially well or which don't work.
